@@ -16,3 +16,7 @@ This is a general password generator that prompts for what type of password the 
 ## Features
 
 Generates a password using a random number generator that then selects from a list of available password characters based upon user input. The character selections are uppercase lettres, lowercase letters, numbers, and special characters.
+
+## Screenshots
+
+![](./assets/password_gen_screenshot.jpg)
