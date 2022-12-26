@@ -34,22 +34,22 @@ function askQuestions() {
   upperCaseLettersConfirm = confirm("Do you want uppercase letters?");
   if (upperCaseLettersConfirm) {
     totalChars = totalChars.concat(upperCaseLetters);
-    }
+  }
   lowerCaseLettersConfirm = confirm("Do you want lowercase letters?");
   if (lowerCaseLettersConfirm) {
     totalChars = totalChars.concat(lowerCaseLetters);
-    }
+  }
   specialCharsConfirm = confirm("How about special characters?");
   if (specialCharsConfirm) {
     totalChars = totalChars.concat(specialCharacters);
-    }
+  }
   numbersConfirm = confirm("Finally, would you like numbers?");
   if (numbersConfirm) {
     totalChars = totalChars.concat(numbers);
   }
 
   /* If no answer characters are selected we'll ask user if they want to try again, if not return a message they didn't select any characters to be generated */
-  
+
 
   if (!upperCaseLettersConfirm && !lowerCaseLettersConfirm && !numbersConfirm && !specialCharsConfirm) {
     var noValidChoice = confirm("You entered no valid information. Do you want to try again?");
