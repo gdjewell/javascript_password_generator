@@ -17,7 +17,11 @@ var numbersConfirm;
 
 function askQuestions() {
 
+  /* This question asks the user how many characters their password will have and converts those characters into an integer */
+
   numOfChar = parseInt(prompt("How many characters does this password have? Please enter a number between 8 and 128."));
+
+  /* This if statement will determine if the password length requirements are met. If not, questions will repeat. */
   
   if (numOfChar < 8 || numOfChar > 128) {
 
@@ -25,6 +29,8 @@ function askQuestions() {
     return;
   }
   
+  /* These series of questions determine if the user will use certain characters in their password, and upon confirming, an if statement is used to add their answer to the list of total characters */
+
   upperCaseLettersConfirm = confirm("Do you want uppercase letters?");
   if (upperCaseLettersConfirm) {
     totalChars = totalChars.concat(upperCaseLetters);
@@ -41,6 +47,9 @@ function askQuestions() {
   if (numbersConfirm) {
     totalChars = totalChars.concat(numbers);
   }
+
+  /* If no answer characters are selected we'll ask user if they want to try again, if not return a message they didn't select any characters to be generated */
+  
 
   if (!upperCaseLettersConfirm && !lowerCaseLettersConfirm && !numbersConfirm && !specialCharsConfirm) {
     var noValidChoice = confirm("You entered no valid information. Do you want to try again?");
